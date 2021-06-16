@@ -141,13 +141,52 @@ h1 {
     font-size: 1.7rem;
     margin-bottom: 90px;
 }
-#productsContainer article {
-    height: 300px;
-    width: 300px;
-    margin: .5rem;
+.catFrame {
+    height: calc(clamp(330px, 30vw, 520px) + 15px);
+    width: calc(clamp(330px, 30vw, 520px) + 15px);
+    border: 3px solid #EDF4ED;
+    margin: 1.2rem .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+#productsContainer a {
+    height: clamp(330px, 30vw, 520px);
+    width: clamp(330px, 30vw, 520px);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+}
+#productsContainer a h3 {
+    background-color: #354124ce;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: 10%;
+    padding-bottom: .2rem;
+    backdrop-filter: blur(5px);
+    transition: .3s ease-out;
+}
+#productsContainer .catFrame:hover {
+    border: 3px solid #4c6339;
+}
+#productsContainer .catFrame:hover a {
+    background-size: 115%;
+}
+#productsContainer .catFrame:hover h3 {
+    height: 98%;
 }
 #productsContainer {
-    background-color: rgba(255, 99, 71, 0.685);
+    /* background-color: #ff6347af; */
     width: 76vw;
     margin-left: 12vw;
     display: flex;
@@ -156,19 +195,22 @@ h1 {
     flex-wrap: wrap;
 }
 #gums {
-background-color: blue;
+    background-image: url('../img/home/cat1.jpg');
 }
 #oils {
-    background-color: red;
+    background-image: url('../img/home/cat2.jpg');
 }
 #infusions {
-    background-color: green;
+    background-image: url('../img/home/cat3.jpg');
 }
 #liquids {
-    background-color: yellow;
+    background-image: url('../img/home/cat4.jpg');
 }
 /* END SECTION PRODUCTS */
 
+/* START SECTION CONTACT */
+
+/* END SECRION COCNTACT */
 #filler {
     width: 100%;
     height: 1200px;
@@ -198,6 +240,18 @@ background-color: blue;
     }
     .infoBand div:not(.bandImgFrame) {
         width: 70vw;
+    }
+    #productsContainer {
+        width: 100%;
+        margin-left: 0;
+    }
+    .catFrame {
+        height: calc(max(60vw, 300px) + 15px);
+        width: calc(max(60vw, 300px) + 15px);
+    }
+    #productsContainer a {
+        height: max(60vw, 300px);
+        width: max(60vw, 300px);
     }
 }
 @media screen and (max-width: 620px) {

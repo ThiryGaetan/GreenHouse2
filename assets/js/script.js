@@ -19,6 +19,7 @@ window.addEventListener('load', function() {
     }
 });
 
+// BURGER MENU DISPLAY, HIDE ON CLICK OUT, HIDE ON VIEWPORT CHANGE
 window.addEventListener('click', function(e) {
     if(e.path.some((e) => e == navListBurger)) {
         navMenu.classList.toggle('navMenuToggle');
@@ -28,4 +29,10 @@ window.addEventListener('click', function(e) {
                 navMenu.classList.remove('navMenuToggle');
                 navBurger.classList.remove('navBurgerToggle');
               }
+});
+window.addEventListener('resize', function() {
+    if(window.innerWidth > 750) {
+        navMenu.classList.remove('navMenuToggle');
+        navBurger.classList.remove('navBurgerToggle');
+    }
 });
