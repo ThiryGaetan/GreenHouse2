@@ -210,10 +210,12 @@ background-color: blue;
         margin-bottom: 1vw;
     }
     #headerNavContainer {
-        top: calc(100vh - 240px);
+        top: calc(100vh - 260px);
     }
     #headerBottom {
         height: 80px;
-        top: calc(100vh - 80px);
+        top: calc(100vh - 100px);
+        align-items: flex-start;
+        padding-top: 5px;
     }
 }
