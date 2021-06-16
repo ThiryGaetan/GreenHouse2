@@ -36,8 +36,8 @@ main {
 /* START NAVBAR */
 nav {
     width: 100%;
-    height: 47px;
-    border-bottom: 4px solid #ffffff;
+    height: 52px;
+    border-bottom: 4px solid #EDF4ED;
     position: fixed;
     z-index: 20;
     top: 0;
@@ -49,10 +49,10 @@ nav {
     list-style: none;
     background-color: #354124e3;
     width: 100%;
-    height: 40px;
+    height: 45px;
     display: grid;
     grid-template-columns: 40% repeat(4, 15%);
-    grid-template-rows: 40px;
+    grid-template-rows: 45px;
     grid-template-areas: '_title _home _products _shops _contact';
 }
 #navTitle {
@@ -149,6 +149,13 @@ nav a:hover {
     transform: scaleX(1) !important;
 }
 @media screen and (max-width: 750px) {
+    nav {
+        height: 70px;
+    }
+    #navList {
+        height: 63px;
+        grid-template-rows: 63px;
+    }
     #navList li:not(#navTitle):not(#navBurger) {
         display: none;
     }

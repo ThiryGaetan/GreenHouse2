@@ -187,14 +187,14 @@ background-color: blue;
         /* margin-bottom: 50px; */
     }
     .infoBand .bandImgFrame {
-        min-height: calc(40vw + 15px);
-        width: calc(40vw + 15px);
+        min-height: calc(max(40vw,220px) + 15px);
+        width: calc(max(40vw,220px) + 15px);
         margin-top: -25vw;
         margin-bottom: 1rem;
     }
     .infoBand img {
-        height: 40vw;
-        width: 40vw;
+        height: max(40vw,220px);
+        width: max(40vw,220px);
     }
     .infoBand div:not(.bandImgFrame) {
         width: 70vw;
