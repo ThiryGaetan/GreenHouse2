@@ -78,7 +78,7 @@ h1 {
     animation: scrollBop 4s ease 1s infinite;
     transition: .3s;
 }
-#headerBottom a:hover img {
+#headerBottom:hover img {
     filter:
         invert(87%)
         sepia(37%)
@@ -208,5 +208,12 @@ background-color: blue;
     }
     #headerNavContainer li {
         margin-bottom: 1vw;
+    }
+    #headerNavContainer {
+        top: calc(100vh - 240px);
+    }
+    #headerBottom {
+        height: 80px;
+        top: calc(100vh - 80px);
     }
 }
