@@ -1,0 +1,212 @@
+/*      HOME PAGE       */
+
+/* START HEADER */
+header {
+    height: 100vh;
+    width: 100%;
+    /* background-image: url('../img/home/header.jpg'); */
+    /* background-position: top; */
+    /* background-size: cover; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headerTitleFrame {
+    border: 4px solid #EDF4ED;
+    /* border: 4px solid #85a785; */
+    width: fit-content;
+    position: absolute;
+    top: 20vh;
+}
+h1 {
+    font-family: 'Josefin';
+    font-size: min(12vw, 7rem);
+    color: #EDF4ED;
+    background-color: #00000096;
+    backdrop-filter: blur(5px);
+    margin: 10px;
+    padding: 1.5vw 10vw 0 10vw;
+}
+#headerNavContainer {
+    position: absolute;
+    top: calc(100vh - 200px);
+    border-bottom: 4px solid #EDF4ED;
+    width: 100%;
+}
+#headerNavContainer ul {
+    list-style: none;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #EDF4ED;
+    background-image: linear-gradient(#00000000, #000000bd);
+    margin-bottom: 3px;
+    padding-bottom: 10px;
+}
+#headerNavContainer a {
+    color: #EDF4ED;
+    text-decoration: none;
+    transition: .3s;
+}
+#headerNavContainer a:hover {
+    color: #88d440;
+}
+#headerBottom {
+    height: 40px;
+    width: 100%;
+    background-image: linear-gradient(#000000b4, #202918e1);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headerBottom img {
+    filter:
+        invert(91%)
+        sepia(3%)
+        saturate(315%)
+        hue-rotate(71deg)
+        brightness(108%)
+        contrast(92%);
+    margin-top: -5px;
+    animation: scrollBop 4s ease 1s infinite;
+    transition: .3s;
+}
+#headerBottom a:hover img {
+    filter:
+        invert(87%)
+        sepia(37%)
+        saturate(867%)
+        hue-rotate(33deg)
+        brightness(91%)
+        contrast(80%);
+}
+@keyframes scrollBop {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(8px);}
+}
+/* END HEADER */
+
+/* START MAIN */
+/* START SECTION INFOS */
+.infoBand {
+    background-color: #4c6339;
+    height: 370px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 10px 0 #EDF4ED;
+}
+#band1 {
+    margin-bottom: 40vh;
+}
+#band2 {
+    margin-bottom: 30vh;
+}
+.infoBand .bandImgFrame {
+    height: calc(30vw + 15px);
+    width: calc(30vw + 15px);
+    border: 3px solid #EDF4ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.infoBand img {
+    height: 30vw;
+    width: 30vw;
+}
+.infoBand div:not(.bandImgFrame) {
+    color: #ffffff;
+    width: 30vw;
+    margin: 0 0 .8rem -1.8rem;
+    border-left: 4px solid #EDF4ED;
+    /* padding: .3rem .3rem .5rem 1.8rem; */
+    padding-left: 1.8rem;
+}
+.infoBand h2 {
+    margin: 0rem 0 1rem 1.5rem;
+}
+/* END SECTION INFOS */
+
+/* START SECTION PRODUCTS */
+#products h2 {
+    text-align: center;
+    color: #EDF4ED;
+    font-size: 1.7rem;
+    margin-bottom: 90px;
+}
+#productsContainer article {
+    height: 300px;
+    width: 300px;
+    margin: .5rem;
+}
+#productsContainer {
+    background-color: rgba(255, 99, 71, 0.685);
+    width: 76vw;
+    margin-left: 12vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#gums {
+background-color: blue;
+}
+#oils {
+    background-color: red;
+}
+#infusions {
+    background-color: green;
+}
+#liquids {
+    background-color: yellow;
+}
+/* END SECTION PRODUCTS */
+
+#filler {
+    width: 100%;
+    height: 1200px;
+}
+
+/*      QUERIES         */
+@media screen and (max-width: 1030px) {
+    #band1 {
+        flex-direction: column;
+    }
+    #band2 {
+        flex-direction: column-reverse;
+    }
+    .infoBand {
+        height: fit-content;
+        /* margin-bottom: 50px; */
+    }
+    .infoBand .bandImgFrame {
+        min-height: calc(40vw + 15px);
+        width: calc(40vw + 15px);
+        margin-top: -25vw;
+        margin-bottom: 1rem;
+    }
+    .infoBand img {
+        height: 40vw;
+        width: 40vw;
+    }
+    .infoBand div:not(.bandImgFrame) {
+        width: 70vw;
+    }
+}
+@media screen and (max-width: 620px) {
+    #headerNavContainer ul {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #headerNavContainer li {
+        margin-bottom: 1vw;
+    }
+}

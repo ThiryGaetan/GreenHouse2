@@ -1,0 +1,166 @@
+/*      COMMON STYLE        */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Josefin';
+    src: url('../font/JosefinSans-VariableFont_wght.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 110%;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    /* overflow-x: hidden; */
+    background-image: url('../img/home/header.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #202918d2;
+    /* background-color: #cce9cc; */
+}
+main {
+    background-color: #202918e1;
+    padding-top: 30vh;
+    backdrop-filter: blur(5px);
+}
+
+/* START NAVBAR */
+nav {
+    width: 100%;
+    height: 47px;
+    border-bottom: 4px solid #ffffff;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: .5s;
+}
+#navList {
+    list-style: none;
+    background-color: #354124e3;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 40% repeat(4, 15%);
+    grid-template-rows: 40px;
+    grid-template-areas: '_title _home _products _shops _contact';
+}
+#navTitle {
+    grid-area: _title;
+}
+#navHome {
+    grid-area: _home;
+}
+#navProducts {
+    grid-area: _products;
+}
+#navShops {
+    grid-area: _shops;
+}
+#navContact {
+    grid-area: _contact;
+}
+nav li:not(#navTitle) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#navTitle {
+    display: flex;
+    align-items: center;
+}
+#navTitle a {
+    font-family: 'Josefin', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: 3vw;
+    padding-top: 5px;
+
+}
+nav a {
+    color: #EDF4ED;
+    text-decoration: none;
+    font-size: 1.2rem;
+    /* font-weight: 600; */
+    transition: .3s;
+}
+nav a:hover {
+    color: #c1d196;
+}
+.currentPage {
+    text-decoration: underline;
+}
+#navBurger {
+    display: none;
+    grid-area: _burger;
+}
+#navBurger img {
+    filter:
+        invert(91%)
+        sepia(3%)
+        saturate(315%)
+        hue-rotate(71deg)
+        brightness(108%)
+        contrast(92%);
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.5s;
+}
+#navBurger img:hover {
+    filter:
+        invert(92%)
+        sepia(17%)
+        saturate(616%)
+        hue-rotate(23deg)
+        brightness(88%)
+        contrast(89%);
+}
+#navMenuList {
+    display: flex;
+    height: calc(100vh - 50px);
+    width: 40vw;
+    margin-top: 10px;
+    margin-left: 60vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: #354124e3;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: .5s;
+}
+#navMenuList a {
+    margin-top: 2.5vh;
+    margin-right: 6vw;
+}
+.navBurgerToggle {
+    transform: rotate(90deg);
+}
+.navMenuToggle {
+    transform: scaleX(1) !important;
+}
+@media screen and (max-width: 750px) {
+    #navList li:not(#navTitle):not(#navBurger) {
+        display: none;
+    }
+    #navList {
+        grid-template-areas: '_title  . . . _burger';
+    }
+}
+/* END NAVBAR */
+
+
+#bigdiv {
+    height: 3000px;
+    width: 50%;
+    background-color: tomato;
+}
