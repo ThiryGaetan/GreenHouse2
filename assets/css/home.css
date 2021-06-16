@@ -213,7 +213,7 @@ background-color: blue;
         top: calc(100vh - 260px);
     }
     #headerBottom {
-        height: 80px;
+        height: 100px;
         top: calc(100vh - 100px);
         align-items: flex-start;
         padding-top: 5px;
