@@ -19,7 +19,13 @@ window.addEventListener('load', function() {
     }
 });
 
-navBurger.addEventListener('click', function() {
-    navMenu.classList.toggle('navMenuToggle');
-    navBurger.classList.toggle('navBurgerToggle');
+window.addEventListener('click', function(e) {
+    if(e.path.some((e) => e == navListBurger)) {
+        navMenu.classList.toggle('navMenuToggle');
+        navBurger.classList.toggle('navBurgerToggle');
+    } else if(!(e.path.some((e) => e == navMenuList) ||
+              e.path.some((e) => e == navList))) {
+                navMenu.classList.remove('navMenuToggle');
+                navBurger.classList.remove('navBurgerToggle');
+              }
 });
