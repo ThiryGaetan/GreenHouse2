@@ -135,6 +135,9 @@ h1 {
 /* END SECTION INFOS */
 
 /* START SECTION PRODUCTS */
+#products {
+    margin-bottom: 200px;
+}
 #products h2 {
     text-align: center;
     color: #EDF4ED;
@@ -174,13 +177,13 @@ h1 {
     height: 10%;
     padding-bottom: .2rem;
     backdrop-filter: blur(5px);
-    transition: .3s ease-out;
+    transition: .2s ease-out;
 }
 #productsContainer .catFrame:hover {
     border: 3px solid #4c6339;
 }
 #productsContainer .catFrame:hover a {
-    background-size: 115%;
+    background-size: 105%;
 }
 #productsContainer .catFrame:hover h3 {
     height: 98%;
@@ -209,12 +212,71 @@ h1 {
 /* END SECTION PRODUCTS */
 
 /* START SECTION CONTACT */
-
-/* END SECRION COCNTACT */
-#filler {
-    width: 100%;
-    height: 1200px;
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 250px;
 }
+#contact h2 {
+    text-align: center;
+    color: #EDF4ED;
+    font-size: 1.7rem;
+    margin-bottom: 90px;
+}
+#map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    border: 3px solid #EDF4ED;
+    margin-bottom: 70px;
+}
+#map iframe {
+    width: 60vw;
+    margin: 5px;
+    
+}
+#contactBtn {
+    width: 200px;
+    height: 50px;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-size: 1.1em;
+    /* font-weight: bold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #354124;
+    border: 2px solid #EDF4ED;
+    border-radius: 3px;
+    color: #ffffff;
+    transition: background-color .15s, transform .1s;
+}
+#contactBtn:hover {
+    background-color: #3e4b2a;
+}
+#contactBtn:active {
+    background-color: #354124;
+    transform: translateY(3px);
+}
+/* END SECTION COCNTACT */
+/* START FOOTER */
+footer {
+    height: 305px;
+    width: 100%;
+    padding-top: 5px;
+    border-top: 4px solid #EDF4ED;
+}
+footer div {
+    height: 300px;
+    width: 100%;
+    background-color: #354124;
+}
+/* END FOOTER */
+
 
 /*      QUERIES         */
 @media screen and (max-width: 1030px) {
@@ -271,5 +333,15 @@ h1 {
         top: calc(100vh - 100px);
         align-items: flex-start;
         padding-top: 5px;
+    }
+}
+/* FOR TOUCHSCREEN DEVICES */
+@media (hover: none) {
+    #productsContainer .catFrame a {
+        background-size: 105%;
+    }
+    #productsContainer .catFrame h3 {
+        height: 98%;
+        backdrop-filter: blur(2px);
     }
 }
