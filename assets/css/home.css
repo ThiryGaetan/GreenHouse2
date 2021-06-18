@@ -142,6 +142,7 @@ h1 {
     text-align: center;
     color: #EDF4ED;
     font-size: 1.7rem;
+    padding: 0 70px;
     margin-bottom: 90px;
 }
 .catFrame {
@@ -152,7 +153,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s;
+    transition: border .5s;
 }
 #productsContainer a {
     height: clamp(330px, 30vw, 520px);
@@ -165,7 +166,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: .5s;
+    transition: background-size .5s;
 }
 #productsContainer a h3 {
     background-color: #354124ce;
@@ -177,7 +178,7 @@ h1 {
     height: 10%;
     padding-bottom: .2rem;
     backdrop-filter: blur(5px);
-    transition: .2s ease-out;
+    transition: height .2s ease-out;
 }
 #productsContainer .catFrame:hover {
     border: 3px solid #4c6339;
@@ -217,7 +218,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 250px;
+    margin-bottom: 200px;
 }
 #contact h2 {
     text-align: center;
@@ -263,19 +264,6 @@ h1 {
     transform: translateY(3px);
 }
 /* END SECTION COCNTACT */
-/* START FOOTER */
-footer {
-    height: 305px;
-    width: 100%;
-    padding-top: 5px;
-    border-top: 4px solid #EDF4ED;
-}
-footer div {
-    height: 300px;
-    width: 100%;
-    background-color: #354124;
-}
-/* END FOOTER */
 
 
 /*      QUERIES         */
@@ -288,7 +276,6 @@ footer div {
     }
     .infoBand {
         height: fit-content;
-        /* margin-bottom: 50px; */
     }
     .infoBand .bandImgFrame {
         min-height: calc(max(40vw,220px) + 15px);
@@ -305,15 +292,17 @@ footer div {
     }
     #productsContainer {
         width: 100%;
-        margin-left: 0;
+        margin-left: 0%;
     }
+}
+@media screen and (max-width: 763px) {
     .catFrame {
-        height: calc(max(60vw, 300px) + 15px);
-        width: calc(max(60vw, 300px) + 15px);
+        height: calc(max(50vw, 300px) + 15px);
+        width: calc(max(50vw, 300px) + 15px);
     }
     #productsContainer a {
-        height: max(60vw, 300px);
-        width: max(60vw, 300px);
+        height: max(50vw, 300px);
+        width: max(50vw, 300px);
     }
 }
 @media screen and (max-width: 620px) {
@@ -333,6 +322,10 @@ footer div {
         top: calc(100vh - 100px);
         align-items: flex-start;
         padding-top: 5px;
+    }
+    #map iframe {
+        /* width: 80vw; */
+        width: clamp(310px, 80vw, 450px);
     }
 }
 /* FOR TOUCHSCREEN DEVICES */

@@ -148,6 +148,91 @@ nav a:hover {
 .navMenuToggle {
     transform: scaleX(1) !important;
 }
+/* END NAVBAR */
+/* START FOOTER */
+footer {
+    height: fit-content;
+    width: 100%;
+    border-top: 4px solid #EDF4ED;
+}
+#footerContainer {
+    height: fit-content;
+    width: 100%;
+    background-color: #354124;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 80% 20%;
+    grid-template-areas:
+        'fInfo fNav fSocial'
+        'fBottom fBottom fBottom';
+    }
+    #footerContainer li {
+        color: #ffffff;
+    }
+#footerContainer a {
+    color: #ffffff;
+    transition: color .2s, text-decoration .2s;
+}
+#footerSocial img {
+    margin: 6px;
+    transition: filter .2s;
+}
+#footerContainer div:not(#footerBottom) {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 15px 25%;
+}
+#footerContainer #footerBottom ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#footerContainer ul {
+    list-style: none;
+}
+#footerInfo {
+    grid-area: fInfo;
+}
+#footerNav {
+    grid-area: fNav;
+}
+#footerSocial {
+    grid-area: fSocial;
+}
+#footerBottom {
+    grid-area: fBottom;
+}
+#footerContainer div:not(#footerBottom) ul {
+    padding-left: 10px;
+    border-left: 3px solid #EDF4ED;
+}
+#footerBottom li {
+    margin: 10px;
+}
+#footerContainer a:hover {
+    color: #c1d196;
+    text-decoration: none;
+}
+#footerSocial a:hover img {
+    filter:
+        invert(3%)
+        sepia(69%)
+        saturate(316%)
+        hue-rotate(16deg)
+        brightness(86%)
+        contrast(88%);
+}
+/* END FOOTER */
+
+#bigdiv {
+    height: 3000px;
+    width: 50%;
+    background-color: tomato;
+}
+
+/* QUERIES */
 @media screen and (max-width: 750px) {
     nav {
         height: 70px;
@@ -162,12 +247,24 @@ nav a:hover {
     #navList {
         grid-template-areas: '_title  . . . _burger';
     }
+    #footerContainer div:not(#footerBottom) {
+        padding: 15px 0 15px 10%;
+    }
 }
-/* END NAVBAR */
-
-
-#bigdiv {
-    height: 3000px;
-    width: 50%;
-    background-color: tomato;
+@media screen and (max-width: 615px) {
+    #footerContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 2fr) 1fr;
+        grid-template-areas:
+            'fSocial'
+            'fInfo'
+            'fNav'
+            'fBottom';
+    }
+    #footerSocial ul {
+        display: flex;
+    }
+    #footerContainer div:not(#footerBottom) {
+        padding: 15px 0 15px 15px;
+    }
 }
