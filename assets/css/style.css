@@ -20,18 +20,17 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
     background-image: url('../img/home/header.jpg');
     background-position: center;
     background-attachment: fixed;
     background-color: #202918d2;
-    /* background-color: #cce9cc; */
 }
 main {
     background-color: #202918e1;
     padding-top: 300px;
-    backdrop-filter: blur(5px);
 }
+
 
 /* START NAVBAR */
 nav {
@@ -91,7 +90,6 @@ nav a {
     color: #EDF4ED;
     text-decoration: none;
     font-size: 1.2rem;
-    /* font-weight: 600; */
     transition: .2s;
 }
 nav a:hover {
@@ -154,6 +152,7 @@ footer {
     height: fit-content;
     width: 100%;
     border-top: 4px solid #EDF4ED;
+    background-color: #202918e1;
 }
 #footerContainer {
     height: fit-content;

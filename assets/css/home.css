@@ -4,26 +4,21 @@
 header {
     height: 100vh;
     width: 100%;
-    /* background-image: url('../img/home/header.jpg'); */
-    /* background-position: top; */
-    /* background-size: cover; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 #headerTitleFrame {
     border: 4px solid #EDF4ED;
-    /* border: 4px solid #85a785; */
     width: fit-content;
     position: absolute;
     top: 20vh;
 }
 h1 {
-    font-family: 'Josefin';
+    font-family: 'Josefin', sans-serif;
     font-size: min(12vw, 7rem);
     color: #EDF4ED;
     background-color: #00000096;
-    backdrop-filter: blur(5px);
     margin: 10px;
     padding: 1.5vw 10vw 0 10vw;
 }
@@ -59,7 +54,6 @@ h1 {
     height: 40px;
     width: 100%;
     background-image: linear-gradient(#000000b4, #202918e1);
-    backdrop-filter: blur(5px);
     position: absolute;
     top: calc(100vh - 40px);
     display: flex;
@@ -126,7 +120,6 @@ h1 {
     width: 30vw;
     margin: 0 0 .8rem -1.8rem;
     border-left: 4px solid #EDF4ED;
-    /* padding: .3rem .3rem .5rem 1.8rem; */
     padding-left: 1.8rem;
 }
 .infoBand h2 {
@@ -177,7 +170,6 @@ h1 {
     width: 98%;
     height: 10%;
     padding-bottom: .2rem;
-    backdrop-filter: blur(5px);
     transition: height .2s ease-out;
 }
 #productsContainer .catFrame:hover {
@@ -190,7 +182,6 @@ h1 {
     height: 98%;
 }
 #productsContainer {
-    /* background-color: #ff6347af; */
     width: 76vw;
     margin-left: 12vw;
     display: flex;
@@ -218,7 +209,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 200px;
+    padding-bottom: 200px;
 }
 #contact h2 {
     text-align: center;
@@ -246,7 +237,6 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     font-size: 1.1em;
-    /* font-weight: bold; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -324,7 +314,6 @@ h1 {
         padding-top: 5px;
     }
     #map iframe {
-        /* width: 80vw; */
         width: clamp(310px, 80vw, 450px);
     }
 }
@@ -335,6 +324,5 @@ h1 {
     }
     #productsContainer .catFrame h3 {
         height: 98%;
-        backdrop-filter: blur(2px);
     }
 }
