@@ -21,8 +21,8 @@ html {
 }
 body {
     /* overflow-y: scroll; */
-    background-image: url('../img/home/header2.jpg');
-    background-position: center;
+    background-image: url('../img/home/header.jpg');
+    background-position: top;
     background-attachment: fixed;
     background-color: #202918d2;
 }
