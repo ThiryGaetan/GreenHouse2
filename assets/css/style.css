@@ -22,7 +22,7 @@ html {
 body {
     /* overflow-y: scroll; */
     background-image: url('../img/home/header.jpg');
-    background-position: center;
+    background-position: bottom;
     background-attachment: fixed;
     background-color: #202918d2;
 }
