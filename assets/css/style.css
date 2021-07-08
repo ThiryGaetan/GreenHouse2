@@ -19,15 +19,15 @@ html {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body {
+/* body { */
     /* background-image: url('../img/home/header.jpg'); */
     /* background-position: center;
     background-attachment: fixed; */
     /* background-size: cover; */
-    background-color: #202918;
+    /* background-color: #202918; */
     /* background-size: cover;
     min-height: 100vh; */
-}
+/* } */
 body::before {
     content: "";
     background-image: url('../img/home/header.jpg');
@@ -41,9 +41,6 @@ body::before {
     z-index: -1;
 }
 main {
-    /* background-image: url('../img/home/header.jpg');
-    background-position: center;
-    background-attachment: fixed; */
     background-color: #202918e1;
     padding-top: 300px;
 }
