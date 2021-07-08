@@ -21,9 +21,9 @@ html {
 }
 body {
     background-image: url('../img/home/header.jpg');
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
-    background-size: 100% 100vh !important;
+    background-size: cover;
     background-color: #202918d2;
 }
 main {
