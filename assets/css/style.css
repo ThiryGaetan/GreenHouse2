@@ -21,7 +21,7 @@ html {
 }
 body {
     background-image: url('../img/home/header.jpg');
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
     /* background-size: cover; */
     background-color: #202918d2;
