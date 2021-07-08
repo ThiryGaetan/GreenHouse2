@@ -20,10 +20,10 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    /* overflow-y: scroll; */
     background-image: url('../img/home/header.jpg');
     background-position: top;
     background-attachment: fixed;
+    background-size: cover;
     background-color: #202918d2;
 }
 main {
