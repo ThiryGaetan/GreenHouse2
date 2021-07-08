@@ -23,7 +23,7 @@ body {
     background-image: url('../img/home/header.jpg');
     background-position: top;
     background-attachment: fixed;
-    background-size: cover !important;
+    background-size: 100% 100vh !important;
     background-color: #202918d2;
 }
 main {
