@@ -25,7 +25,8 @@ body {
     background-attachment: fixed;
     /* background-size: cover; */
     background-color: #202918d2;
-    height: 125vh;
+    background-size: cover;
+    min-height: 100vh;
 }
 main {
     background-color: #202918e1;
